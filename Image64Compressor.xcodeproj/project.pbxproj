@@ -54,7 +54,7 @@
 		8EC24C8923DA3721005AC874 = {
 			isa = PBXGroup;
 			children = (
-				8EC24C9423DA3721005AC874 /* Image64Compresor */,
+				8EC24C9423DA3721005AC874 /* Image64Compressor */,
 				8EC24C9323DA3721005AC874 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,7 +67,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8EC24C9423DA3721005AC874 /* Image64Compresor */ = {
+		8EC24C9423DA3721005AC874 /* Image64Compressor */ = {
 			isa = PBXGroup;
 			children = (
 				D806503523DE2DF400A9DB9D /* Assets */,
@@ -76,7 +76,7 @@
 				8EC24C9E23DA4172005AC874 /* Models */,
 				D802FA5923DDF1FD0016F330 /* Application */,
 			);
-			path = Image64Compresor;
+			path = Image64Compressor;
 			sourceTree = "<group>";
 		};
 		8EC24C9E23DA4172005AC874 /* Models */ = {
