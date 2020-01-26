@@ -3,7 +3,6 @@
 
 [![Swift 5.0](https://img.shields.io/badge/swift-5.0-red.svg?style=flat)](https://developer.apple.com/swift)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/Image64Compressor.svg?style=flat-square)](http://makeapullrequest.com)
 
 Image64Compressor - Image Assets (PDF, PNG, JPEG ) String Base 64 Encode Compressor
 
