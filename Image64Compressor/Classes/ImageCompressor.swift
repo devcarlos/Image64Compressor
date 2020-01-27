@@ -18,7 +18,9 @@ class ImageCompressor {
     var config = Config()
 
     func staticMode(_ arguments: [String]) {
-        parser.parseCommands(arguments)
+        var args = arguments
+        _ = args.removeFirst()
+        parser.parseCommands(args)
         config = parser.getConfig()
         self.startCompressor()
     }

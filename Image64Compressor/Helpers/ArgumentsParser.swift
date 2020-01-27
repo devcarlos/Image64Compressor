@@ -51,17 +51,16 @@ class ArgumentsParser {
 
     func parseCommands(_ args: [String]) {
         var tempArgs = args
-        // Only config
-        while let arg = tempArgs.first,
-            let command = CommandType(rawValue: arg) {
-                _  = tempArgs.removeFirst()
-                let value = !tempArgs.isEmpty ? tempArgs.removeFirst() : ""
-                switch command {
-                case .config, .projectName, .rootPath:
-                    commands.append(Command(command, value))
-                default:
-                    break
-                }
+        while tempArgs.first != nil {
+            let arg = tempArgs.removeFirst()
+            let value = !tempArgs.isEmpty ? tempArgs.removeFirst() : ""
+            let command = CommandType(value: arg)
+            switch command {
+            case .config, .projectName, .rootPath:
+                commands.append(Command(command, value))
+            default:
+                break
+            }
         }
     }
 
