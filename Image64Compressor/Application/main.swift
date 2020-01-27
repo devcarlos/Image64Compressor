@@ -11,11 +11,10 @@
 
 import Foundation
 
-let compresor = ImageCompressor()
+let compressor = ImageCompressor()
+
 if CommandLine.argc < 2 {
-  compresor.interactiveMode()
+    compressor.interactiveMode()
 } else {
-  compresor.staticMode()
+    compressor.staticMode(CommandLine.arguments)
 }
-
-

@@ -1,43 +1,19 @@
 //
-//  Templates.swift
-//  Image64Compresor
+//  ImageAssetsTemplate.swift
+//  Image64Compressor
 //
 //  Copyright © 2020 DevCarlos & iAle. All rights reserved.
 //
 
-import Foundation
-
-let AssetTemplate = """
-
-import UIKit
-
-
-public typealias AssetImageTypeAlias = UIImage
-public typealias AssetDataTypeAlias = Data
-
-public struct ImageAsset {
-    public let name: String
-    public let key: String
-
-    public var image: AssetImageTypeAlias {
-        return ImageAssets.imageFromString(key) ?? UIImage()
-    }
-
-    public var data: AssetDataTypeAlias {
-        return ImageAssets.dataFromString(key) ?? Data()
-    }
-}
-
-public enum Asset {
-    {{templateItems}}
-}
-"""
-
-let ImageAssetsTemplate = """
+let imageAssetsTemplateString = """
+//
+//  {{ProjectName}}Assets.swift
+//  {{ProjectName}}
+//
 
 import UIKit
 
-enum ImageAssets: String, CaseIterable {
+enum {{ProjectName}}ImageAssets: String, CaseIterable {
 
     {{AssetItems}}
 
@@ -65,4 +41,3 @@ enum ImageAssets: String, CaseIterable {
     }
 }
 """
-

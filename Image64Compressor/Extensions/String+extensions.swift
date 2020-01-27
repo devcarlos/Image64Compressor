@@ -1,16 +1,11 @@
 //
-//  Helpers.swift
-//  Image64Compresor
+//  String+extensions.swift
+//  Image64Compressor
 //
 //  Copyright © 2020 DevCarlos & iAle. All rights reserved.
 //
 
-/// ************************
-/// Image Base 64 Compressor
-/// ************************
-
 import Foundation
-import AppKit
 
 extension String {
 
@@ -29,20 +24,8 @@ extension String {
         let upperCased = self.upperCamelCased
         return upperCased.prefix(1).lowercased() + upperCased.dropFirst()
     }
-}
 
-extension String {
     var pathExtension: PathExtension {
         return PathExtension(rawValue: self) ?? .none
     }
-}
-
-extension NSBitmapImageRep {
-    var png: Data? { representation(using: .png, properties: [:]) }
-}
-extension Data {
-    var bitmap: NSBitmapImageRep? { NSBitmapImageRep(data: self) }
-}
-extension NSImage {
-    var png: Data? { tiffRepresentation?.bitmap?.png }
 }
