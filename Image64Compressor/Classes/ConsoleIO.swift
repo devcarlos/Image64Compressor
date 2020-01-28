@@ -40,7 +40,7 @@ enum ConsoleIO {
             """
                 {
                     "projectName": "Demo",
-                    "rootPath": "/Users/user/Desktop/"
+                    "assetsPath": "/Users/user/Desktop/Assets.xcassets/"
                 }
             """
         )
