@@ -1,9 +1,13 @@
 //
 //  ConsoleIO.swift
-//  Image64Compresor
+//  Image64Compressor
 //
 //  Copyright © 2020 DevCarlos & iAle. All rights reserved.
 //
+
+/// ************************
+/// Image Base 64 Compressor
+/// ************************
 
 import Foundation
 
@@ -12,8 +16,9 @@ enum OutputType {
     case standard
 }
 
-class ConsoleIO {
-    func writeMessage(_ message: String, to: OutputType = .standard) {
+enum ConsoleIO {
+
+    static func writeMessage(_ message: String, to: OutputType = .standard) {
         switch to {
         case .standard:
             // 1
@@ -24,22 +29,46 @@ class ConsoleIO {
         }
     }
 
-    func printUsage() {
-
+    static func printUsage() {
         let executableName = (CommandLine.arguments[0] as NSString).lastPathComponent
 
         writeMessage("usage:")
-        writeMessage("\(executableName) -all filepath (e.g. /Users/user/Desktop/Assets)")
-        writeMessage("or")
-        writeMessage("\(executableName) -h to show usage information")
+        writeMessage("*******************************************************")
+        writeMessage("\(executableName) -config filepath to json or plist file (e.g. /Users/user/Desktop/config.json)")
+        writeMessage("Configuration file example")
+        writeMessage(
+            """
+                {
+                    "projectName": "Demo",
+                    "assetsPath": "/Users/user/Desktop/Assets.xcassets/"
+                }
+            """
+        )
+        writeMessage("*******************************************************")
+        writeMessage("\(executableName) --projectName this optional, it use in the templates")
+        writeMessage("*******************************************************")
+        writeMessage("\(executableName) --assetsPath the location of the assets (e.g. /Users/user/Desktop/Assets.xcassets)")
+        writeMessage("*******************************************************")
+        writeMessage("\(executableName) --help to show usage information")
+        writeMessage("*******************************************************")
+        writeMessage("\(executableName) --quit to end program execution")
         writeMessage("Type \(executableName) without an option to enter interactive mode.")
     }
 
-    func getInput() -> String {
+    static func getInput() -> String {
         let keyboard = FileHandle.standardInput
         let inputData = keyboard.availableData
-        let strData = String(data: inputData, encoding: String.Encoding.utf8)!
-        return strData.trimmingCharacters(in: CharacterSet.newlines)
+        if let strData = String(data: inputData, encoding: String.Encoding.utf8) {
+            return strData.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        } else {
+            writeMessage("Invalid input", to: .error)
+            quit()
+            return ""
+        }
+    }
+
+    static func quit() {
+        exit(0)
     }
 }
 
