@@ -19,6 +19,7 @@
 		8E6DF61523DF222100A85B85 /* TemplateProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6DF61123DF222100A85B85 /* TemplateProcessor.swift */; };
 		8E6DF61623DF222100A85B85 /* ArgumentsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6DF61223DF222100A85B85 /* ArgumentsParser.swift */; };
 		8E6DF61823DF223C00A85B85 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6DF61723DF223C00A85B85 /* Config.swift */; };
+		8E96F59E23E0AA930086EECE /* RangeReplaceableCollection+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E96F59D23E0AA930086EECE /* RangeReplaceableCollection+extensions.swift */; };
 		8EC24C9623DA3721005AC874 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC24C9523DA3721005AC874 /* main.swift */; };
 		8EC24CA023DA417B005AC874 /* PathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC24C9F23DA417B005AC874 /* PathExtension.swift */; };
 		8EC24CA423DA4344005AC874 /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC24CA323DA4344005AC874 /* ImageAsset.swift */; };
@@ -51,6 +52,7 @@
 		8E6DF61123DF222100A85B85 /* TemplateProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateProcessor.swift; sourceTree = "<group>"; };
 		8E6DF61223DF222100A85B85 /* ArgumentsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentsParser.swift; sourceTree = "<group>"; };
 		8E6DF61723DF223C00A85B85 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		8E96F59D23E0AA930086EECE /* RangeReplaceableCollection+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RangeReplaceableCollection+extensions.swift"; sourceTree = "<group>"; };
 		8EC24C9223DA3721005AC874 /* Image64Compressor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Image64Compressor; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC24C9523DA3721005AC874 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		8EC24C9F23DA417B005AC874 /* PathExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathExtension.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				8E6DF60623DF21AD00A85B85 /* NSBitmapImageRep+extensions.swift */,
 				8E6DF60823DF21AD00A85B85 /* NSImage+extensions.swift */,
 				8E6DF60923DF21AD00A85B85 /* String+extensions.swift */,
+				8E96F59D23E0AA930086EECE /* RangeReplaceableCollection+extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				8E6DF61323DF222100A85B85 /* ImageProcesor.swift in Sources */,
 				8EC24CA423DA4344005AC874 /* ImageAsset.swift in Sources */,
 				8E6DF60D23DF21AD00A85B85 /* String+extensions.swift in Sources */,
+				8E96F59E23E0AA930086EECE /* RangeReplaceableCollection+extensions.swift in Sources */,
 				8E6DF61623DF222100A85B85 /* ArgumentsParser.swift in Sources */,
 				8EC24C9623DA3721005AC874 /* main.swift in Sources */,
 				D802FA5B23DDF5E70016F330 /* ConsoleIO.swift in Sources */,

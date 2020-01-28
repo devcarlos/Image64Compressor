@@ -22,11 +22,11 @@ enum {{ProjectName}}ImageAssets: String, CaseIterable {
     }
 
     static func imageFromString(_ name: String) -> UIImage? {
-        return ImageAssets.allCases.first(where: { $0.nameEnum.elementsEqual(name) })?.toImage()
+        return {{ProjectName}}ImageAssets.allCases.first(where: { $0.nameEnum.elementsEqual(name) })?.toImage()
     }
 
     static func dataFromString(_ name: String) -> Data? {
-        return ImageAssets.allCases.first(where: { $0.nameEnum.elementsEqual(name) })?.toData()
+        return {{ProjectName}}ImageAssets.allCases.first(where: { $0.nameEnum.elementsEqual(name) })?.toData()
     }
 
     private func toData() -> Data? {

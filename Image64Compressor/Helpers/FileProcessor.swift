@@ -1,7 +1,8 @@
 //
 //  FileProcessor.swift
-//  ImageConverterConsole
+//  Image64Compressor
 //
+//  Copyright © 2020 DevCarlos & iAle. All rights reserved.
 
 import Foundation
 

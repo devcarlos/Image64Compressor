@@ -15,9 +15,9 @@ struct ImageAsset {
 
 class PrintableImageAsset {
 
-    class func templateItem(_ item: ImageAsset) -> String {
+    class func templateItem(_ item: ImageAsset, _ projectName: String = "") -> String {
         return """
-        public static let \(item.key) = ImageAsset(name: "\(item.name)", key: "\(item.key)")\n
+        public static let \(item.key) = \(projectName)ImageAsset(name: "\(item.name)", key: "\(item.key)")\n
         """
     }
 

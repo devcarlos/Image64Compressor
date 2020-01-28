@@ -2,6 +2,8 @@
 //  AssociatedInspectableCompatibleTemplate.swift
 //  Image64Compressor
 //
+//  Copyright © 2020 DevCarlos & iAle. All rights reserved.
+//
 
 import Foundation
 
@@ -77,7 +79,7 @@ public extension UIImageView {
         set {
             if let value = newValue,
                 !value.trimmedString.isEmpty,
-                let image = ImageAssets.imageFromString(value) {
+                let image = {{ProjectName}}ImageAssets.imageFromString(value) {
                 self.image = image
             }
             associatedValue.name = newValue
@@ -162,7 +164,7 @@ public extension UIButton {
         set {
             if let value = newValue,
                 !value.trimmedString.isEmpty,
-                let image = ImageAssets.imageFromString(value) {
+                let image = {{ProjectName}}ImageAssets.imageFromString(value) {
                 self.setImage(image, for: .normal)
             }
             associatedValue.defaultName = newValue
@@ -174,7 +176,7 @@ public extension UIButton {
         set {
             if let value = newValue,
                 !value.trimmedString.isEmpty,
-                let image = ImageAssets.imageFromString(value) {
+                let image = {{ProjectName}}ImageAssets.imageFromString(value) {
                 self.setImage(image, for: .highlighted)
             }
             associatedValue.highlightedName = newValue
@@ -186,7 +188,7 @@ public extension UIButton {
         set {
             if let value = newValue,
                 !value.trimmedString.isEmpty,
-                let image = ImageAssets.imageFromString(value) {
+                let image = {{ProjectName}}ImageAssets.imageFromString(value) {
                 self.setImage(image, for: .selected)
             }
             associatedValue.selectedName = newValue
@@ -198,7 +200,7 @@ public extension UIButton {
         set {
             if let value = newValue,
                 !value.trimmedString.isEmpty,
-                let image = ImageAssets.imageFromString(value) {
+                let image = {{ProjectName}}ImageAssets.imageFromString(value) {
                 self.setImage(image, for: .disabled)
             }
             associatedValue.disabledName = newValue
@@ -237,7 +239,7 @@ public extension UIBarButtonItem {
         set {
             if let value = newValue,
                 !value.trimmedString.isEmpty,
-                let image = ImageAssets.imageFromString(value) {
+                let image = {{ProjectName}}ImageAssets.imageFromString(value) {
                 self.image = image
             }
             associatedValue.imageName = newValue
@@ -292,7 +294,7 @@ public extension UITabBarItem {
         set {
             if let value = newValue,
                 !value.trimmedString.isEmpty,
-                let image = ImageAssets.imageFromString(value) {
+                let image = {{ProjectName}}ImageAssets.imageFromString(value) {
                 self.selectedImage = image
             }
             associatedValue.imageName = newValue
@@ -304,7 +306,7 @@ public extension UITabBarItem {
         set {
             if let value = newValue,
                 !value.trimmedString.isEmpty,
-                let image = ImageAssets.imageFromString(value) {
+                let image = {{ProjectName}}ImageAssets.imageFromString(value) {
                 self.image = image
             }
             associatedValue.imageName = newValue

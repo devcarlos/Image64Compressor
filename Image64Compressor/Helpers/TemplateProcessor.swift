@@ -1,7 +1,8 @@
 //
 //  FileProcessor.swift
-//  ImageConverterConsole
+//  Image64Compressor
 //
+//  Copyright © 2020 DevCarlos & iAle. All rights reserved.
 
 import Foundation
 
@@ -52,7 +53,7 @@ class TemplateProcessor {
 
         let destinationPath = assetsPath.appending("/..")
 
-        let templateItems = assets.map { PrintableImageAsset.templateItem($0) }.joined(separator: "")
+        let templateItems = assets.map { PrintableImageAsset.templateItem($0, projectName) }.joined(separator: "")
         let assetItems = assets.map { PrintableImageAsset.assetItem($0) }.joined(separator: "")
 
         var projectTemplate = projectTemplateContents.replacingOccurrences(
