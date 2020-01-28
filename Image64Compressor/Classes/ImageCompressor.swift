@@ -21,6 +21,9 @@ class ImageCompressor {
         var args = arguments
         _ = args.removeFirst()
         parser.parseCommands(args)
+        if parser.commands.isEmpty {
+            return
+        }
         config = parser.getConfig()
         self.startCompressor()
     }
@@ -33,8 +36,8 @@ class ImageCompressor {
     }
 
     private func startCompressor() {
-        if let rootPath = config.rootPath {
-            processAllImages(at: rootPath)
+        if let assetsPath = config.assetsPath {
+            processAllImages(at: assetsPath)
         } else {
             ConsoleIO.writeMessage("Invalid root path", to: .error)
             ConsoleIO.quit()

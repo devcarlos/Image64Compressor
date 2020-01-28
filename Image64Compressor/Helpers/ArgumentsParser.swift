@@ -58,6 +58,8 @@ class ArgumentsParser {
             switch command {
             case .config, .projectName, .rootPath:
                 commands.append(Command(command, value))
+            case .help:
+                ConsoleIO.printUsage()
             default:
                 break
             }

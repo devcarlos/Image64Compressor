@@ -9,10 +9,10 @@ import Foundation
 
 struct Config: Decodable {
     var projectName: String?
-    var rootPath: String?
+    var assetsPath: String?
 
     init() {
-        rootPath = ""
+        assetsPath = ""
         projectName = ""
     }
 
@@ -22,7 +22,7 @@ struct Config: Decodable {
             case .projectName:
                 self.projectName = value
             case .rootPath:
-                self.rootPath = value
+                self.assetsPath = value
             default:
                 break
             }
@@ -30,10 +30,10 @@ struct Config: Decodable {
     }
 
     var itemsTemplatePath: String? {
-        return rootPath?.appending("/\(FileType.itemsTemplate.rawValue)")
+        return assetsPath?.appending("/\(FileType.itemsTemplate.rawValue)")
     }
 
     var assetsTemplatePath: String? {
-        return rootPath?.appending("/\(FileType.assetsTemplate.rawValue)")
+        return assetsPath?.appending("/\(FileType.assetsTemplate.rawValue)")
     }
 }

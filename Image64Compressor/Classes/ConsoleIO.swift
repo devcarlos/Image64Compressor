@@ -30,13 +30,28 @@ enum ConsoleIO {
     }
 
     static func printUsage() {
-
         let executableName = (CommandLine.arguments[0] as NSString).lastPathComponent
 
         writeMessage("usage:")
-        writeMessage("\(executableName) -all filepath (e.g. /Users/user/Desktop/Assets)")
-        writeMessage("or")
-        writeMessage("\(executableName) -h to show usage information")
+        writeMessage("*******************************************************")
+        writeMessage("\(executableName) -config filepath to json or plist file (e.g. /Users/user/Desktop/config.json)")
+        writeMessage("Configuration file example")
+        writeMessage(
+            """
+                {
+                    "projectName": "Demo",
+                    "rootPath": "/Users/user/Desktop/"
+                }
+            """
+        )
+        writeMessage("*******************************************************")
+        writeMessage("\(executableName) --projectName this optional, it use in the templates")
+        writeMessage("*******************************************************")
+        writeMessage("\(executableName) --assetsPath the location of the assets (e.g. /Users/user/Desktop/Assets.xcassets)")
+        writeMessage("*******************************************************")
+        writeMessage("\(executableName) --help to show usage information")
+        writeMessage("*******************************************************")
+        writeMessage("\(executableName) --quit to end program execution")
         writeMessage("Type \(executableName) without an option to enter interactive mode.")
     }
 

@@ -46,9 +46,11 @@ class TemplateProcessor {
 
     func createTemplates(_ assets: [ImageAsset]) -> Bool {
 
-        guard let destinationPath = config.rootPath, let projectName = config.projectName else {
+        guard let assetsPath = config.assetsPath, let projectName = config.projectName else {
             return false
         }
+
+        let destinationPath = assetsPath.appending("/..")
 
         let templateItems = assets.map { PrintableImageAsset.templateItem($0) }.joined(separator: "")
         let assetItems = assets.map { PrintableImageAsset.assetItem($0) }.joined(separator: "")
