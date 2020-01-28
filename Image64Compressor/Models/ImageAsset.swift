@@ -23,7 +23,16 @@ class PrintableImageAsset {
 
     class func assetItem(_ item: ImageAsset) -> String {
         return """
-        case \(item.key) = "\(item.base64)"\n
+        case \(item.key)\n
         """
+    }
+
+    class func assetsDictionary(_ items: [ImageAsset]) -> String {
+        var values = items.map { "\"\($0.key)\": \"\($0.base64)\"" }
+        for item in values.enumerated() {
+            let separator = item.offset == values.count - 1 ? "" : ","
+            values[item.offset].append(separator)
+        }
+        return values.joined(separator: "\n")
     }
 }

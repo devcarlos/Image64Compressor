@@ -63,7 +63,7 @@ class TemplateProcessor {
 
         var imageAssetsTemplate = imageAssetTemplateContents.replacingOccurrences(
             of: "{{AssetItems}}", with: assetItems
-        )
+        ).replacingOccurrences(of: "{{AssetValues}}", with: PrintableImageAsset.assetsDictionary(assets))
         replaceProjectName(projectName, template: &imageAssetsTemplate)
 
         ConsoleIO.writeMessage("Creating file \(destinationPath)/\(projectName)\(FileType.assets.rawValue)")
