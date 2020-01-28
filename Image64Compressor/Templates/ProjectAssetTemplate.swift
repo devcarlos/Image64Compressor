@@ -21,15 +21,15 @@ public struct {{ProjectName}}ImageAsset {
     public let key: String
 
     public var image: AssetImageTypeAlias {
-        return ImageAssets.imageFromString(key) ?? UIImage()
+        return {{ProjectName}}ImageAssets.imageFromString(key) ?? UIImage()
     }
 
     public var data: AssetDataTypeAlias {
-        return ImageAssets.dataFromString(key) ?? Data()
+        return {{ProjectName}}ImageAssets.dataFromString(key) ?? Data()
     }
 }
 
-public enum Asset {
+public enum {{ProjectName}}Asset {
     {{templateItems}}
 }
 """
